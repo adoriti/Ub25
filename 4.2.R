@@ -1,8 +1,23 @@
-# load libraries----
-library(tidyverse)
-library(data.table)
-library(lubridate)
-library(fpp)
+# ------ Time series analysis ----- #
+# developer: Afroditi Doriti
+# version: 2.0
+# changes: used doParallel, package loading with pacman
+# description: customer brand preferences, classification models
+# input: "household_power_consumption.txt",
+# data ownership: 
+# ------------------------------- #
+# outputs:
+# ------------------------------- #
+
+# load packages ----
+if (!require("pacman")) {
+  install.packages("pacman")
+}
+
+pacman::p_load("tidyverse",
+               "data.table",
+               "lubridate",
+               "doParallel")
 
 # set wd  and read data ----
 # set wd
